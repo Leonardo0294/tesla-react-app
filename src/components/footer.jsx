@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      <p>&copy; {new Date().getFullYear()} Tesla</p>
+      <p><span style={{ color: 'white' }}>&copy; 2024 Tesla</span></p>
     </footer>
   );
 }
