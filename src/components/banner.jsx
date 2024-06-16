@@ -28,12 +28,11 @@ function Banner() {
   return (
     <section className="banner">
       <div className="banner-content">
-        <h3 style={{ color: 'white' }}>Descubre el Nuevo Tesla Model Z</h3>
-        <p className="banner-text">{displayText}</p> {/* Aplica la clase "banner-text" */}
+        <h3 style={{ color: 'white', textAlign: 'center' }}>Descubre el Nuevo Tesla Model Z</h3>
+        <p className="banner-text" style={{ textAlign: 'center', marginTop: '10px' }}>{displayText}</p> {/* Aplica el estilo para centrar el texto */}
       </div>
       <div className="banner-footer">
-   
-       
+        {/* Contenido del pie de página, puedes agregar más aquí */}
       </div>
     </section>
   );

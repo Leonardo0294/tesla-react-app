@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './styles.css';
 import Header from './components/header.jsx';
 import Banner from './components/banner.jsx';
@@ -7,7 +7,7 @@ import ModelZInfo from './components/modelZInfo.jsx';
 import CallToAction from './components/callToAction.jsx';
 import Footer from './components/footer.jsx';
 import teslaModelZImage from './assets/file.png';
-import teslaLogo from './assets/logotesla.png';
+
 function App() {
   const [dynamicText, setDynamicText] = useState('');
 
@@ -38,7 +38,13 @@ function App() {
           <Route path="/modelInfo" element={<ModelZInfo />} />
           <Route path="/callToAction" element={<CallToAction />} />
         </Routes>
+
+        {/* Imagen del Tesla Model Z centrada */}
         <img src={teslaModelZImage} alt="Tesla Model Z" className="tesla-model-img" />
+
+        {/* Agregar el botón para ir a ModelZInfo */}
+        <Link to="/modelInfo" className="info-button">Ver información del Modelo Z</Link>
+
         <Footer />
       </div>
     </BrowserRouter>
