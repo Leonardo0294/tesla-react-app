@@ -1,0 +1,26 @@
+/* Estilos para el componente History */
+
+.history-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para mejorar la legibilidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .history-title {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .history-text {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify; /* Justificar el texto */
+    line-height: 1.6; /* Espacio entre líneas */
+    margin-bottom: 20px;
+  }
+  
