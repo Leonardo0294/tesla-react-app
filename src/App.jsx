@@ -35,7 +35,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Link to="/history" className="history-button">Historia de Tesla</Link> {/* Nueva ruta */}
+        <Link to="/history" className="history-button">Sobre nosotros</Link> {/* Nueva ruta */}
         <Link to="/vehicles" className="vehicles-button">Ver más Modelos</Link>
         <Routes>
           <Route path="/" element={<HomePage dynamicText={dynamicText} />} />

@@ -5,7 +5,7 @@ function Banner() {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    const originalText = '¡El futuro de la movilidad eléctrica!';
+    const originalText = '¡El futuro de la moviliidad eléctrica!';
     let index = 0;
 
     const interval = setInterval(() => {
