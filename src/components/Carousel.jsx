@@ -6,8 +6,11 @@ import LazyLoad from 'react-lazyload';
 import teslaModel1 from '../assets/ModelY.jpg';
 import teslaModel2 from '../assets/tesla-model-s.jpg';
 import teslaModel3 from '../assets/cybertruck.jpg';
-import teslaModel4 from '../assets/modelo3.jpg';  
-import teslaModel5 from '../assets/tesla_roadster.jpg';  
+import teslaModel4 from '../assets/modelo3.jpg';
+import teslaModel5 from '../assets/tesla_roadster.jpg';
+import videoModel3 from '../assets/Cybertruck.mp4'; // Video del Cybertruck
+import videoModel4 from '../assets/model3.mp4'; // Video del Model 3
+import videoModel1 from '../assets/ModelY.mp4'; // Video del Model Y
 
 const CarouselComponent = () => {
   const models = [
@@ -15,26 +18,19 @@ const CarouselComponent = () => {
       image: teslaModel1,
       alt: "Tesla Model Y",
       description: "El Tesla Model Y es un SUV eléctrico compacto con excelente autonomía y espacio interior.",
-    },
-    {
-      image: teslaModel2,
-      alt: "Tesla Model S",
-      description: "El Tesla Model S es un sedán eléctrico de lujo con impresionante rendimiento y tecnología avanzada.",
+      video: videoModel1, // Video del Model Y
     },
     {
       image: teslaModel3,
       alt: "Tesla Cybertruck",
       description: "El Tesla Cybertruck es una camioneta eléctrica futurista con diseño resistente y capacidad de carga impresionante.",
+      video: videoModel3, // Video del Cybertruck
     },
     {
       image: teslaModel4,
       alt: "Tesla Model 3",
       description: "El Tesla Model 3 es un sedán eléctrico accesible con gran autonomía y características tecnológicas avanzadas.",
-    },
-    {
-      image: teslaModel5,
-      alt: "Tesla Roadster",
-      description: "El Tesla Roadster es un deportivo eléctrico de alto rendimiento con velocidad y diseño impresionantes.",
+      video: videoModel4, // Video del Model 3
     },
   ];
 
@@ -65,7 +61,7 @@ const CarouselComponent = () => {
   };
 
   return (
-    <div style={{ maxWidth: '800px', margin: 'auto' }}>
+    <div style={{ maxWidth: '800px', margin: 'auto', paddingTop: '20px' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '20px', color: 'white', fontSize: '2.5rem' }}>Conozca otras opciones</h2>
       <Slider {...settings}>
         {models.map((model, index) => (
@@ -79,6 +75,21 @@ const CarouselComponent = () => {
           </div>
         ))}
       </Slider>
+
+      <div style={{ marginTop: '50px', textAlign: 'center' }}>
+        <h2 style={{ marginBottom: '20px', color: 'white', fontSize: '2.5rem' }}>Videos sobre los modelos de Tesla</h2>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+          {models.map((model, index) => (
+            <div key={index} style={{ maxWidth: '400px' }}>
+              <h3 style={{ color: 'white' }}>{model.alt}</h3>
+              <video controls style={{ width: '100%', maxWidth: '100%' }}>
+                <source src={model.video} type="video/mp4" />
+                Tu navegador no soporta la etiqueta de video.
+              </video>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

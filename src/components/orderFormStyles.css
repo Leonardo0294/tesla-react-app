@@ -1,0 +1,89 @@
+/* Estilo general para el contenedor del formulario */
+.order-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Estilo para el título del formulario */
+  .order-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Estilo para el formulario */
+  .order-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo para los grupos de campos del formulario */
+  .order-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para las etiquetas de los campos del formulario */
+  .order-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+  }
+  
+  /* Estilo para los campos de entrada de texto y correo electrónico */
+  .order-form input[type="text"],
+  .order-form input[type="email"],
+  .order-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  /* Estilo para el área de texto (textarea) */
+  .order-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    height: 100px; /* Altura inicial del textarea */
+  }
+  
+  /* Cambio de color del borde al enfocar los campos de entrada */
+  .order-form input[type="text"]:focus,
+  .order-form input[type="email"]:focus,
+  .order-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Estilo para el botón de envío */
+  .order-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Cambio de color de fondo al pasar el ratón sobre el botón de envío */
+  .order-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el mensaje de agradecimiento */
+  .order-form h2 + p {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+  }
+  

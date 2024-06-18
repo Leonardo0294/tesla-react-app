@@ -7,7 +7,9 @@ import ModelZInfo from './components/modelZInfo.jsx';
 import CallToAction from './components/callToAction.jsx';
 import Footer from './components/footer.jsx';
 import CarouselComponent from './components/Carousel.jsx';
-import History from './components/History.jsx'; // Importa el nuevo componente
+import History from './components/History.jsx';
+import VideoComponent from './components/VideoComponent.jsx';
+import OrderForm from './components/OrderForm.jsx'; // Importa el componente de pedidos
 import teslaModelZImage from './assets/file.png';
 
 function App() {
@@ -35,14 +37,19 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-        <Link to="/history" className="history-button">Sobre nosotros</Link> {/* Nueva ruta */}
-        <Link to="/vehicles" className="vehicles-button">Ver más Modelos</Link>
+        <nav className="nav-links">
+          <Link to="/" className="nav-link">Inicio</Link>
+          <Link to="/history" className="nav-link">Sobre nosotros</Link>
+          <Link to="/vehicles" className="nav-link">Ver más Modelos</Link>
+          <Link to="/order" className="nav-link">Comprar</Link> {/* Enlace al formulario de pedidos */}
+        </nav>
         <Routes>
           <Route path="/" element={<HomePage dynamicText={dynamicText} />} />
           <Route path="/modelInfo" element={<ModelZInfoPage />} />
           <Route path="/callToAction" element={<CallToActionPage />} />
           <Route path="/vehicles" element={<CarouselPage />} />
-          <Route path="/history" element={<History />} /> {/* Nueva ruta */}
+          <Route path="/history" element={<History />} />
+          <Route path="/order" element={<OrderForm />} /> {/* Ruta para el formulario de pedidos */}
         </Routes>
         <Footer />
       </div>
@@ -55,6 +62,7 @@ const HomePage = ({ dynamicText }) => (
     <Banner dynamicText={dynamicText} />
     <img src={teslaModelZImage} alt="Tesla Model Z" className="tesla-model-img" />
     <Link to="/modelInfo" className="info-button">Ver información del Modelo Z</Link>
+    <VideoComponent /> {/* Integrar el componente de videos en la página de inicio */}
   </>
 );
 

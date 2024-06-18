@@ -1,50 +1,71 @@
-/* Estilos para el botón "Vehículos" */
-.vehicles-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: transparent; /* Fondo transparente */
-  color: white; /* Color del texto cambiado a blanco */
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
-  border: 2px solid #007bff; /* Borde sólido con color original */
+/* Estilos para los enlaces de navegación */
+.nav-links {
+  display: flex;
+  justify-content: space-between; /* Alineación con espacio entre elementos */
+  padding: 10px;
 }
 
-.vehicles-button:hover {
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease; /* Transición suave para los efectos */
+}
+
+.nav-link:hover {
   background-color: rgba(0, 123, 255, 0.1); /* Color de fondo al pasar el ratón */
   border-color: #007bff; /* Borde al pasar el ratón */
   color: #0056b3; /* Color del texto al pasar el ratón */
 }
 
-/* Estilos para el botón "Historia de Tesla" */
+/* Ajustes adicionales para los botones específicos */
+.vehicles-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+}
+
+.vehicles-button:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-color: #007bff;
+  color: #0056b3;
+}
+
 .history-button {
   position: absolute;
   top: 20px;
   left: 20px;
   padding: 10px 20px;
-  background-color: transparent; /* Fondo transparente */
-  color: white; /* Color del texto cambiado a blanco */
+  background-color: transparent;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
   font-size: 16px;
-  border: 2px solid #007bff; /* Borde sólido con color azul */
+  border: 2px solid #007bff;
 }
 
 .history-button:hover {
-  background-color: rgba(40, 167, 69, 0.1); /* Color de fondo al pasar el ratón */
-  border-color: #007bff; /* Borde al pasar el ratón */
-  color: #218838; /* Color del texto al pasar el ratón */
+  background-color: rgba(40, 167, 69, 0.1);
+  border-color: #007bff;
+  color: #218838;
 }
 
-/* Estilos para el enlace "Ver información del Modelo Z" */
 .info-button {
-  color: white; /* Cambia el color del texto a blanco */
+  color: white;
 }
 
 .info-button:hover {
-  color: #e0e0e0; /* Cambia el color del texto a un tono más claro al pasar el ratón */
+  color: #e0e0e0;
 }
 
 /* Ajustes adicionales para el cuerpo y contenedor principal */
@@ -57,8 +78,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background-image: url('./assets/azul_blanco.jpg');
-  background-size: cover; /* Ajusta el tamaño para cubrir completamente el fondo */
-  background-position: center; /* Centra la imagen vertical y horizontalmente */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
