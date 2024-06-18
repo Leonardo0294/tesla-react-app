@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import './styles.css';
+import './styles.css'; // Asegúrate de tener un archivo styles.css o styles.scss para tus estilos
+
+// Importa tus componentes
 import Header from './components/header.jsx';
 import Banner from './components/banner.jsx';
 import ModelZInfo from './components/modelZInfo.jsx';
@@ -9,7 +11,7 @@ import Footer from './components/footer.jsx';
 import CarouselComponent from './components/Carousel.jsx';
 import History from './components/History.jsx';
 import VideoComponent from './components/VideoComponent.jsx';
-import OrderForm from './components/OrderForm.jsx'; // Importa el componente de pedidos
+import OrderForm from './components/OrderForm.jsx'; // Componente de formulario de pedidos
 import teslaModelZImage from './assets/file.png';
 
 function App() {
@@ -63,6 +65,12 @@ const HomePage = ({ dynamicText }) => (
     <img src={teslaModelZImage} alt="Tesla Model Z" className="tesla-model-img" />
     <Link to="/modelInfo" className="info-button">Ver información del Modelo Z</Link>
     <VideoComponent /> {/* Integrar el componente de videos en la página de inicio */}
+    <div className="model-z-info">
+      <h2 style={{ color: 'white' }}>Descubre el Nuevo Tesla Model Z</h2>
+      <p style={{ color: 'white' }}>
+        El Tesla Model Z es el último avance en tecnología de vehículos eléctricos. Con su diseño futurista, rendimiento excepcional y características innovadoras, redefine la experiencia de conducir. Prepárate para vivir el futuro hoy mismo con el Model Z.
+      </p>
+    </div>
   </>
 );
 
